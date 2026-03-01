@@ -15,19 +15,41 @@ This is a fork of the original youtube-transcript package that adds a **fallback
 - **Better error handling**: New `YoutubeTranscriptEmptyError` class
 - **Improved reliability**: Automatic fallback increases success rate
 
-## Installation
-
-```bash
-$ npm i @danielxceron/youtube-transcript
-```
-
-or
-
-```bash
-$ yarn add @danielxceron/youtube-transcript
-```
-
 ## Usage
+
+### CLI
+
+Build first:
+
+```bash
+npm run build
+```
+
+Fetch transcript as JSON:
+
+```bash
+node cli.js "https://www.youtube.com/watch?v=VIDEO_ID"
+```
+
+Pretty print:
+
+```bash
+node cli.js "https://www.youtube.com/watch?v=VIDEO_ID" --pretty
+```
+
+Specific language:
+
+```bash
+node cli.js "https://www.youtube.com/watch?v=VIDEO_ID" --lang en
+```
+
+Write output to file:
+
+```bash
+node cli.js "https://www.youtube.com/watch?v=VIDEO_ID" --out transcript.json --pretty
+```
+
+### Library API
 
 ```js
 import { YoutubeTranscript } from '@danielxceron/youtube-transcript';

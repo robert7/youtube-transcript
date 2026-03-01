@@ -13,8 +13,12 @@
       "types": "./dist/index.d.ts"
     }
   },
+  "bin": {
+    "youtube-transcript": "./cli.js"
+  },
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "cli": "node cli.js"
   },
   "author": "Daniel Ceron Claros <danielxceron>",
   "contributors": [
@@ -33,7 +37,8 @@
     "typescript": "^4.0.3"
   },
   "files": [
-    "dist/*"
+    "dist/*",
+    "cli.js"
   ],
   "repository": "https://github.com/danielxceron/youtube-transcript.git",
   "publishConfig": {
