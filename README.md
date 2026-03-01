@@ -1,10 +1,8 @@
 # youtube-transcript
 
-[![npm version](https://img.shields.io/npm/v/@danielxceron/youtube-transcript.svg)](https://www.npmjs.com/package/@danielxceron/youtube-transcript)
-
 ## About This Fork
 
-This is a fork of the original youtube-transcript package that adds a **fallback system** for improved reliability. The original package used only HTML scraping, which sometimes fails or returns empty results. This version automatically falls back to YouTube's InnerTube API when needed.
+This is a fork of `@danielxceron/youtube-transcript`.
 
 ⚠️ **Note**: The InnerTube API fallback works best in client-side and local server environments.
 
@@ -47,14 +45,6 @@ Write output to file:
 
 ```bash
 node cli.js "https://www.youtube.com/watch?v=VIDEO_ID" --out transcript.json --pretty
-```
-
-### Library API
-
-```js
-import { YoutubeTranscript } from '@danielxceron/youtube-transcript';
-
-YoutubeTranscript.fetchTranscript('videoId or URL').then(console.log);
 ```
 
 ### Supported URL Formats
